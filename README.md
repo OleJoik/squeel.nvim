@@ -2,11 +2,13 @@
 
 A simple nvim plugin that brings inline SQL syntax highlighting and formatting to python files
 
-Heavily inspired by [TJ DeVries youtube video on how to format embedded languaged in NeoVim](https://www.youtube.com/watch?v=v3o9YaHBM4Q)
+Heavily inspired by TJ DeVries [youtube video](https://www.youtube.com/watch?v=v3o9YaHBM4Q) on how to format embedded languaged in NeoVim.
+
+It depends on [sqlparse](https://github.com/andialbrecht/sqlparse), which the `setup` function brings into the virtual environment.
 
 ## Requirements
 
-- Python 3.8+ ... to create virtual environment for sqlparse formatting tool
+- Python 3.8+ ... to create a virtual environment for the plugin
 - Plenary ... for cross platform path operations related to python venv
 - treesitter with languages `python` and `sql` installed
 
