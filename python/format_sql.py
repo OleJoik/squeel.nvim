@@ -3,8 +3,6 @@ import sqlparse
 
 contents = sys.stdin.read()
 
-result = sqlparse.format
-
 result = sqlparse.format(
     contents,
     keyword_case="upper",
