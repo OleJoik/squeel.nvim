@@ -136,7 +136,7 @@ M.setup = function()
 	validate_python(python)
 
 	if vim.fn.isdirectory(squeel_data_path) == 0 then
-		vim.fn.mkdir(squeel_data, "p")
+		vim.fn.mkdir(squeel_data_path)
 	end
 
 	create_venv(python, venv_path)
