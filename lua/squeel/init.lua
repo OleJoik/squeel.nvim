@@ -47,10 +47,6 @@ local function venv_executable_path(venv_path)
 		python_executable = venv_path .. "/bin/python"
 	end
 
-	if not is_executable(python_executable) then
-		error("SQUEEL: No python executable found in venv " .. venv_path)
-	end
-
 	return python_executable
 end
 
