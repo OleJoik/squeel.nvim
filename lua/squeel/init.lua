@@ -18,17 +18,17 @@ end
 
 local function find_python(path)
 	local output = ""
-	if path then
+	if path ~= nil then
 		if is_executable(path) then
 			output = path
+		end
+	else
+		if vim.fn.executable("python3") == 1 then
+			output = "python3"
+		elseif vim.fn.executable("python") == 1 then
+			output = "python"
 		else
-			if vim.fn.executable("python3") == 1 then
-				output = "python3"
-			elseif vim.fn.executable("python") == 1 then
-				output = "python"
-			else
-				error("SQUEEL: Python is not available. Please install Python and try again.")
-			end
+			error("SQUEEL: Python is not available. Please install Python and try again.")
 		end
 	end
 
