@@ -136,7 +136,7 @@ M.setup = function()
 		return
 	end
 
-	local python = find_python("/home/olol/.nix-profile/bin/python")
+	local python = find_python()
 	validate_python(python)
 
 	if vim.fn.isdirectory(squeel_data_path) == 0 then
